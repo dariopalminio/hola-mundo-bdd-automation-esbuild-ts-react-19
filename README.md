@@ -38,7 +38,7 @@ npm run test:e2e:open
 npm run test:e2e 
 ```
 
-![Screenshot cypress](doc/img/screenshot_cypress_hola_mundo.png)
+![Screenshot cypress](doc/img/screenshot_cypress_hola_mundo_node20.png)
 
 References: \
 - https://cucumber.io/docs/gherkin/reference \
