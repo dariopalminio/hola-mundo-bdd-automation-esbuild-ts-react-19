@@ -40,8 +40,8 @@ npm run test:e2e
 
 ![Screenshot cypress](doc/img/screenshot_cypress_node20.png)
 
-References: \
-- https://cucumber.io/docs/gherkin/reference \
+References: 
+- https://cucumber.io/docs/gherkin/reference 
 - https://filiphric.com/cucumber-in-cypress-a-step-by-step-guide#adding-parameters-to-step-definitions
 - https://github.com/eccanto/base-cypress-cucumber-typescript/blob/master/tsconfig.json
 
