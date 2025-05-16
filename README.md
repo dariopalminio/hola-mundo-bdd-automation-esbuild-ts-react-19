@@ -18,6 +18,26 @@ Característica: Mostrar página principal
     Entonces debería ver la página principal
     Y debería ver el título "Hola Mundo"
 ```
+# Estructura de proyecto
+
+```
+my-project/
+├── cypress/
+│   ├── e2e/
+│   │   └── features/                     <--- Contiene archivos .feature en formato Gherkin
+│   │          └── your-feature.feature 
+│   └── support/
+│              ├── step_definitions/      <--- Contiene los pasos de los archivos .feature
+│              │     └── your-feature.steps.ts
+│              └── commands.ts
+│              └── e2e.ts
+├── src/
+│   └── (... your react code to testing)
+├── cypress.config.ts  (o cypress.config.js)
+├── package.json
+├── tsconfig.json
+└── …
+```
 
 #  Instalar
 ```
