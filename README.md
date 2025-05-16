@@ -52,10 +52,33 @@ Ejecutar en una terminal:
 npm run dev
 ```
 
-Ejecutar en otra terminal:
+## Ejecutar en otra terminal:
+
+Ejecución visual:
 ```
 npm run test:e2e:open
+```
+Ejecución con salida por terminal:
+```
 npm run test:e2e 
+```
+
+Ejecución de pruebas de humo:
+```
+npm run test:e2e:smoke
+```
+o directamente:
+```
+npx cypress run --env tags="@Smoke"
+```
+
+Ejecución de pruebas de regresión:
+```
+npm run test:e2e:regression
+```
+o directamente:
+```
+npx cypress run --env tags="@Regression"
 ```
 
 ![Screenshot cypress](doc/img/screenshot_cypress_node20.png)

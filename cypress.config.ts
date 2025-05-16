@@ -20,7 +20,7 @@ export default defineConfig({
     },
     env: {
       version: process.env.VITE_ENV || "qa",
-      TAGS: process.env.TAGS || "@Regression", //Si no se define TAGS en el comando de ejecución, se usará el valor predeterminado "@Regression".
+      TAGS: process.env.TAGS || "@regression", //Si no se define TAGS en el comando de ejecución, se usará el valor predeterminado "@Regression".
     },
     async setupNodeEvents(
       on: Cypress.PluginEvents,

@@ -6,10 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint:eslint": "eslint .",
+    "lint:tsc": "tsc --noEmit",
+    "lint": "npm run lint:eslint; npm run lint:tsc",
+    "lint:fix": "npm run lint:eslint -- --fix",
     "preview": "vite preview",
     "test:e2e": "cypress run",
-    "test:e2e:open": "cypress open"
+    "test:e2e:open": "cypress open",
+    "test:e2e:smoke": "cypress run --env tags='@Smoke'",
+    "test:e2e:regression": "cypress run --env tags='@Regression'"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
