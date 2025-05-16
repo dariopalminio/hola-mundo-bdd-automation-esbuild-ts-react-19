@@ -92,6 +92,8 @@ Ejecución visual:
 ```
 npm run test:e2e:open
 ```
+![Screenshot cypress](doc/img/screenshot_cypress_node20.png)
+
 Ejecución con salida por terminal:
 ```
 npm run test:e2e 
@@ -114,8 +116,6 @@ o directamente:
 ```
 npx cypress run --env tags="@Regression"
 ```
-
-![Screenshot cypress](doc/img/screenshot_cypress_node20.png)
 
 
 References: 
