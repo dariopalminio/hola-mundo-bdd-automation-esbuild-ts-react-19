@@ -6,9 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint:eslint": "eslint .",
+    "lint": "eslint .",
     "lint:tsc": "tsc --noEmit",
-    "lint": "npm run lint:eslint; npm run lint:tsc",
     "lint:fix": "npm run lint:eslint -- --fix",
     "preview": "vite preview",
     "test:e2e": "cypress run",
@@ -56,7 +55,11 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
-    "step_definitions": "cypress/support/step_definitions/",
+    "stepDefinitions": [
+      "cypress/e2e/[filepath]/**/*.{js,ts}",
+      "cypress/e2e/[filepath].{js,ts}",
+      "cypress/support/step_definitions/**/*.{js,ts}"
+    ],
     "html": {
       "enabled": true
     }

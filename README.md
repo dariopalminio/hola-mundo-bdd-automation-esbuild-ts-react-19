@@ -83,6 +83,39 @@ npx cypress run --env tags="@Regression"
 
 ![Screenshot cypress](doc/img/screenshot_cypress_node20.png)
 
+# Configuration
+
+Hay dos maneras de modificar la configuración predeterminada del preprocesador de Cucumber. Puedes crear un archivo de configuración .cypress-cucumber-preprocessorrc.json similar a este:
+
+```
+{
+  "stepDefinitions": [
+    "cypress/e2e/[filepath]/**/*.{js,ts}",
+    "cypress/e2e/[filepath].{js,ts}",
+    "cypress/support/step_definitions/**/*.{js,ts}",
+  ]
+}
+```
+O configure todo directamente en su package.json agregando el equivalente:
+
+```
+// rest of file skipped for brevity
+"cypress-cucumber-preprocessor": {
+  "stepDefinitions": [
+    "cypress/e2e/[filepath]/**/*.{js,ts}",
+    "cypress/e2e/[filepath].{js,ts}",
+    "cypress/support/step_definitions/**/*.{js,ts}",
+  ]
+}
+```
+
+Si las rutas no son configuradas cypress busca por defecto las siguientes:
+```
+- cypress\e2e\features/hola-mundo/**/*.{js,mjs,ts,tsx}
+- cypress\e2e\features/hola-mundo.{js,mjs,ts,tsx}
+- cypress/support/step_definitions/**/*.{js,mjs,ts,tsx}
+```
+
 References: 
 - https://cucumber.io/docs/gherkin/reference 
 - https://filiphric.com/cucumber-in-cypress-a-step-by-step-guide#adding-parameters-to-step-definitions

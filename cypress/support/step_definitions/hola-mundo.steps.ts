@@ -13,7 +13,7 @@ When("la página carga", () => {
 });
 
 //Entonces
-Then("debería ver la página principal", (mensaje: string) => {
+Then("debería ver la página principal", () => {
   //Vemos el home
   cy.get("[date-test='home']").should('be.visible', {timeout: 10000})
 });
