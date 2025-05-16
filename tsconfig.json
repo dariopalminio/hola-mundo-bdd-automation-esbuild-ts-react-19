@@ -1,11 +1,9 @@
 {
-   "ts-node": {
-    "files": true
-  },
   "compilerOptions": {
-    "target": "ES2017",
+    "esModuleInterop": true, // Habilita la interoperabilidad entre los módulos de CommonJS y los módulos de ECMAScript
+    "target": "ESNext", // JavaScript compatible con las características de ECMAScript 2017
     "lib": ["dom", "ESNext"],
-    "module": "ESNext",
+    "module": "ESNext", // ESNext es común en proyectos React que utilizan un bundler como Vite
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
@@ -30,4 +28,3 @@
     "cypress.config.ts"
   ]
 }
-

@@ -1,11 +1,11 @@
 # Hola Mundo BDD Automation
-Hola Mundo de una automatización BDD con cypress y cucumber
-
-Node v20.19.2
-npx 10.8.2
-React 19.1.0
+Hola Mundo de una automatización BDD con cypress y cucumber. Para desarrollar este proyecto se usó:
+- Node v20.19.2
+- npx 10.8.2
+- React 19.1.0
+- cypress-cucumber-preprocessor
     
-
+Se usa cypress-cucumber-preprocessor para E2E testing usando Esbuild como empaquetador (bundler) de JavaScript y TypeScript.
 
 #  Característica Gherkin implementada
 
@@ -121,6 +121,9 @@ npx cypress run --env tags="@Regression"
 References: 
 - https://cucumber.io/docs/gherkin/reference 
 - https://filiphric.com/cucumber-in-cypress-a-step-by-step-guide#adding-parameters-to-step-definitions
+
+Bases de código de referencia:
+- https://github.com/JoanEsquivel/cypress-cucumber-boilerplate/blob/master/package.json
 - https://github.com/eccanto/base-cypress-cucumber-typescript/blob/master/tsconfig.json
 
 
