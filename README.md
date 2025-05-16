@@ -105,7 +105,7 @@ npm run test:e2e:smoke
 ```
 o directamente:
 ```
-npx cypress run --env tags="@Smoke"
+npx cypress run --env tags="@smoke"
 ```
 
 Ejecución de pruebas de regresión:
@@ -114,7 +114,7 @@ npm run test:e2e:regression
 ```
 o directamente:
 ```
-npx cypress run --env tags="@Regression"
+npx cypress run --env tags="@regression"
 ```
 
 

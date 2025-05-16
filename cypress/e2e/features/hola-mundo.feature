@@ -3,7 +3,7 @@
 
 Característica: Mostrar página principal
 
-  @smoke
+  @regression @smoke
   Escenario: Mostrar página de bienvenida
     Dado que estoy en la página principal
     Cuando la página carga

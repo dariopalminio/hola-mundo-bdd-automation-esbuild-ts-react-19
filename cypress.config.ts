@@ -13,9 +13,10 @@ async function setupNodeEvents(
   on: Cypress.PluginEvents,
   config: Cypress.PluginConfigOptions,
 ): Promise<Cypress.PluginConfigOptions> {
-  // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
+  // Registra el preprocesador de Cucumber
   await addCucumberPreprocessorPlugin(on, config);
 
+  // Usa esbuild para preprocesar los archivos .feature
   on(
     "file:preprocessor",
     createBundler({
@@ -23,25 +24,32 @@ async function setupNodeEvents(
     }),
   );
 
-  // Make sure to return the config object as it might have been modified by the plugin.
   return config;
 }
 
 export default defineConfig({
   e2e: {
+    // Configuracion de baseUrl
     baseUrl: process.env.VITE_APP_TO_TEST_URI || "http://localhost:5173/",
     specPattern: "**/*.feature",
+    // Viewport por defecto
     viewportWidth: 1280,
     viewportHeight: 720,
+    // Opciones para el manejo de videos y capturas de pantalla
     video: true,
     screenshotOnRunFailure: true,
+    // Deshabilita la seguridad web de Chrome (necesario en algunos casos)
     chromeWebSecurity: false,
+    // Limpiar assets antes de cada ejecución
     trashAssetsBeforeRuns: true,
+    // Aislamiento de pruebas
     testIsolation: true,
+    // Reintentos en caso de fallos
     retries: {
-      runMode: 1,
+      runMode: 0,
       openMode: 0,
     },
+    // Variables de entorno
     env: {
       version: process.env.VITE_ENV || "qa",
       TAGS: process.env.TAGS || "@regression", //Si no se define TAGS en el comando de ejecución, se usará el valor predeterminado "@Regression".
@@ -49,3 +57,4 @@ export default defineConfig({
     setupNodeEvents,
   },
 });
+

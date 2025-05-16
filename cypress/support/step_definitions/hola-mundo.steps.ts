@@ -1,4 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import { Home } from '../pages/Home';
+
 
 //Dado
 Given("que estoy en la página principal", () => {
@@ -15,11 +17,11 @@ When("la página carga", () => {
 //Entonces
 Then("debería ver la página principal", () => {
   //Vemos el home
-  cy.get("[date-test='home']").should('be.visible', {timeout: 10000})
+  cy.get(Home.homeSelector).should('be.visible', {timeout: 10000})
 });
 
 //Y
 Then("debería ver el título {string}", (mensaje: string) => {
   //Vemos el título
-  cy.get("[date-test='title']").should("contain", mensaje);
+  cy.get(Home.titleSelector).should("contain", mensaje);
 });
