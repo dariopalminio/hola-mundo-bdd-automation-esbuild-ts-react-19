@@ -29,6 +29,7 @@ my-project/
 │   └── support/
 │              ├── step_definitions/      <--- Contiene los pasos de los archivos .feature
 │              │     └── your-feature.steps.ts
+│              ├── pages/                 <--- Implementaciones de páginas y selectores usados por step_definitions
 │              └── commands.ts
 │              └── e2e.ts
 ├── src/
