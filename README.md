@@ -125,6 +125,8 @@ References:
 Bases de código de referencia:
 - https://github.com/JoanEsquivel/cypress-cucumber-boilerplate/blob/master/package.json
 - https://github.com/eccanto/base-cypress-cucumber-typescript/blob/master/tsconfig.json
+- https://github.com/badeball/cypress-cucumber-preprocessor/tree/master/examples
+
 
 
 
