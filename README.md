@@ -12,11 +12,17 @@ Se usa cypress-cucumber-preprocessor para E2E testing usando Esbuild como empaqu
 ```
 Característica: Mostrar página principal
 
+  @regression @smoke
   Escenario: Mostrar página de bienvenida
     Dado que estoy en la página principal
     Cuando la página carga
     Entonces debería ver la página principal
-    Y debería ver el título "Hola Mundo"
+
+  @regression
+  Escenario: Mostrar título de página de bienvenida
+    Dado que estoy en la página principal
+    Cuando la página carga
+    Entonces debería ver el título "Hola Mundo"
 ```
 # Estructura de proyecto
 
