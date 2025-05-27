@@ -79,6 +79,18 @@ Si las rutas no son configuradas cypress busca por defecto las siguientes:
 - cypress/support/step_definitions/**/*.{js,mjs,ts,tsx}
 ```
 
+Las configuraciones del preprocessor se pueden hacer en cypress.config.ts
+Por ejemplo para acelerar la ejecución de la prueba, puede usar las opciones filterSpecs y omitFiltered, que funcionan de forma similar al complemento @cypress/grep.
+```
+    env: {
+      omitFiltered: true,
+      filterSpecs: true
+    },
+```
+Para configurar cypress.config.ts es recomendable revisar el ejemplo que se acomoda a tu stack en:
+https://github.com/badeball/cypress-cucumber-preprocessor/tree/master/examples
+
+Aquí use como guía Esbuild con TS.
 
 #  Instalar
 ```
