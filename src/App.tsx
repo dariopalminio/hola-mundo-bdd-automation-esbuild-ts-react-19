@@ -5,8 +5,8 @@ function App() {
 
   return (
     <>
-      <div id="home" date-test="home">
-        <h1 id="title" date-test="title">
+      <div id="home" data-testid="home">
+        <h1 id="title" data-testid="title">
           Hola Mundo
         </h1>
       </div>
